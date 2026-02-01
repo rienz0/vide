@@ -35,7 +35,8 @@
   define-command -docstring 'Select a file to open' file-select %{
       echo -debug "%val{session}"
       echo -debug "%val{client}"
-      kks-run zellij run --close-on-exit --name select --in-place -- ${selectFile}/bin/select-file session0 client0 "$kak_buffile"
+      kks-run zellij run --close-on-exit --name select --in-place -- ${selectFile}/bin/select-file "%val{session}" "%val{client}" "$kak_buffile"
+    #   kks-run zellij run --close-on-exit --name select --in-place -- ${selectFile}/bin/select-file session0 client0 "$kak_buffile"
   }
 
   define-command edit-or-buffer -params 0.. %{
@@ -62,8 +63,8 @@
   addhl global/ number-lines -separator "  "
   addhl global/ wrap -word -indent
 
-  rename-session "session0"
-  rename-client "client0"
+#   rename-session "session0"
+#   rename-client "client0"
 
   colorscheme default
 ''

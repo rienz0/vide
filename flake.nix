@@ -59,7 +59,7 @@
 
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
-        packages = with pkgs; [nil];
+        packages = with pkgs; [nil blink];
       };
     });
   };

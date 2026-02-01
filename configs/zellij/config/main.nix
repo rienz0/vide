@@ -1,8 +1,9 @@
-{colors}: ''
-  plugins {
-    zjstatus { path "zjstatus"; }
-  }
+# Add it back to the config when the issue with Rust will be solved
+# plugins {
+#   zjstatus { path "zjstatus"; }
+# }
 
+{colors}: ''
   ui {
     pane_frames {
       rounded_corners true
